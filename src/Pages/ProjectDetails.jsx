@@ -385,6 +385,7 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { useParams } from "react-router-dom";
+import { ProjectsData } from "../data";
 
 const ProjectDetails = () => {
   const { id } = useParams(); // Get the project ID from the URL
@@ -392,13 +393,9 @@ const ProjectDetails = () => {
 
   // Fetch project details from the JSON file
   useEffect(() => {
-    fetch("/project.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const selectedProject = data.find((proj) => proj.id === parseInt(id));
-        setProject(selectedProject);
-      })
-      .catch((err) => console.error("Error fetching project details:", err));
+      const data = ProjectsData;
+      const selectedProject = data.find((proj) => proj.id === parseInt(id));
+      setProject(selectedProject);
   }, [id]);
 
   // Display a loading message if the project isn't loaded yet

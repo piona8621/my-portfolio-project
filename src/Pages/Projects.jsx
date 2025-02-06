@@ -83,15 +83,12 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { ProjectsData } from "../data";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-
   useEffect(() => {
-    fetch('/project.json')
-      .then(res => res.json())
-      .then(data => setProjects(data));
-  }, []); // Add dependency array to ensure the effect runs once on component mount
+    setProjects(ProjectsData)
+  }, []);
 
   return (
     <section id="projects" className="py-20 pt-16">
