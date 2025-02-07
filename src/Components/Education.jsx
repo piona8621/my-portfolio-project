@@ -287,7 +287,7 @@ const Education = () => {
   return (
     <section id="education" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl animate__animated animate__zoomIn animate__infinite animate__slow
+        <h2 className="text-5xl animate__animated animate__zoomIn animate__slow
         font-serif font-bold text-center text-yellow-500 mb-12">
           Educational Qualification
         </h2>

@@ -388,7 +388,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 text-white">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-5xl font-serif font-bold text-center text-yellow-500 mb-8  animate__animated animate__zoomIn animate__infinite animate__slow">
+        <h2 className="text-5xl font-serif font-bold text-center text-yellow-500 mb-8  animate__animated animate__zoomIn animate__slow">
           My Skills
         </h2>
 
@@ -399,22 +399,13 @@ const Skills = () => {
               <h3 className="text-2xl font-semibold font-serif text-yellow-400 mb-4">
                 {category.category}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex justify-center gap-10">
                 {category.skills.map((skill, idx) => (
                   <div key={idx} className="space-y-2 flex items-center">
                     {/* Icon */}
-                    <div className="text-4xl animate__animated animate__fadeInLeft animate__infinite animate__slow">{skill.icon}</div>
+                    <div className="text-7xl animate__animated animate__fadeInLeft animate__slow">{skill.icon}</div>
                     {/* Skill Details */}
-                    <div className="w-full ml-4">
-                      <p className="text-lg">{skill.name}</p>
-                      <div className="w-full bg-gray-700 rounded-full h-4">
-                        <div
-                          className="bg-yellow-500 h-4 rounded-full"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                      <p className="text-sm text-gray-400">{skill.level}%</p>
-                    </div>
+
                   </div>
                 ))}
               </div>
