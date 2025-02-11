@@ -206,7 +206,7 @@ const HeroSection = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-6">
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/piona8621"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl hover:text-gray-300 transition"
@@ -214,23 +214,16 @@ const HeroSection = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/your-username"
+            href="https://www.linkedin.com/in/effatara/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl hover:text-gray-300 transition"
           >
             <FaLinkedin />
           </a>
+          
           <a
-            href="https://twitter.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white text-2xl hover:text-gray-300 transition"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://facebook.com/your-username"
+            href="https://www.facebook.com/profile.php?id=100082840891253"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl hover:text-gray-300 transition"

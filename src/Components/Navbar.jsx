@@ -141,16 +141,8 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useTypewriter } from "react-simple-typewriter";
 
 const Navbar = () => {
-  const [text] = useTypewriter({
-    words: ["Effat Portfolio", "Web Developer"],  // Change these words as per your need
-    loop: true,
-    typeSpeed: 150,
-    deleteSpeed: 100,
-    delaySpeed: 2000,
-  });
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -164,14 +156,14 @@ const Navbar = () => {
     <nav className="z-[1000] mx-auto sticky top-4 flex items-center justify-between py-4 px-6 w-11/12 bg-[#F2F6FA] border border-solid rounded-xl dark:bg-[#181818] shadow-sm dark:shadow-md dark:border-[#242222] dark:text-white">
       <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
         {/* Logo with Typewriter effect */}
-        <div className="text-2xl font-bold font-serif  text-yellow-500">
+        <div className="text-lg font-bold font-serif px-2  text-yellow-500">
           <NavLink to="/">
-            <span>{text}</span>
+            <span>Web Developer</span>
           </NavLink>
         </div>
 
         {/* Navigation Links (Desktop) */}
-        <ul className="hidden md:flex text-xl font-serif gap-6 text-lg font-medium">
+        <ul className="hidden md:flex font-serif gap-6 text-lg font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
               <NavLink
@@ -189,7 +181,7 @@ const Navbar = () => {
         {/* Button - Positioned to the Right (Desktop) */}
         <div className="hidden md:flex">
           <NavLink to={"/contact"}>
-            <button className="ml-6 px-6 py-2 font-serif text-2xl bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">
+            <button className="ml-6 px-6 py-2 font-serif text-xl bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">
               Hire Me
             </button>
           </NavLink>

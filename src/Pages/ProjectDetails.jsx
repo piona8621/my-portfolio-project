@@ -27,7 +27,7 @@
 //           alt={project.name}
 //           className="w-full h-auto rounded-md mb-6"
 //         />
-        
+
 //         <p className="text-lg mb-4 text-gray-400"> <span className="text-yellow-500 text-xl font-serif font-bold"> Description</span> :  {project.briefDescription}</p>
 //         <ul className="mb-4">
 //           <li className="text-gray-400">
@@ -71,129 +71,6 @@
 // };
 
 // export default ProjectDetails;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useEffect, useState } from "react";
 // import { FaGithub } from "react-icons/fa";
@@ -295,97 +172,11 @@
 
 // export default ProjectDetails;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { ProjectsData } from "../data";
+import { CiLink } from "react-icons/ci";
 
 const ProjectDetails = () => {
   const { id } = useParams(); // Get the project ID from the URL
@@ -393,19 +184,22 @@ const ProjectDetails = () => {
 
   // Fetch project details from the JSON file
   useEffect(() => {
-      const data = ProjectsData;
-      const selectedProject = data.find((proj) => proj.id === parseInt(id));
-      setProject(selectedProject);
+    const data = ProjectsData;
+    const selectedProject = data.find((proj) => proj.id === parseInt(id));
+    setProject(selectedProject);
   }, [id]);
 
   // Display a loading message if the project isn't loaded yet
-  if (!project) return <div className="text-center text-yellow-500">Loading...</div>;
+  if (!project)
+    return <div className="text-center text-yellow-500">Loading...</div>;
 
   return (
     <section className="py-20 bg-gradient-to-r mt-10 from-gray-800 via-gray-900 to-black">
       <div className="max-w-5xl mx-auto px-6">
         {/* Project Title */}
-        <h2 className="text-4xl font-bold text-yellow-500 mb-6">{project.name}</h2>
+        <h2 className="text-4xl font-bold text-yellow-500 mb-6">
+          {project.name}
+        </h2>
 
         {/* Project Image */}
         <img
@@ -416,7 +210,9 @@ const ProjectDetails = () => {
 
         {/* Description */}
         <p className="text-lg text-gray-300 mb-6">
-          <span className="text-yellow-500 text-xl font-semibold">Description:</span>{" "}
+          <span className="text-yellow-500 text-xl font-semibold">
+            Description:
+          </span>{" "}
           {project.briefDescription}
         </p>
 
@@ -424,36 +220,42 @@ const ProjectDetails = () => {
         <div className="space-y-4">
           {/* Technology Stack */}
           <div>
-            <strong className="text-yellow-500 text-xl font-serif">Main Technology Stack:</strong>
-            <p className="text-gray-300">{project.mainTechnologyStack.join(", ")}</p>
+            <strong className="text-yellow-500 text-xl font-serif">
+              Main Technology Stack:
+            </strong>
+            <p className="text-gray-300">
+              {project.mainTechnologyStack.join(", ")}
+            </p>
           </div>
 
           {/* Live Link */}
-          <div>
-            <strong className="text-yellow-500 text-xl font-serif">Live Link:</strong>{" "}
+          <div className="space-x-2">
+          <CiLink className="inline text-yellow-500 text-3xl font-serif font-bold" />
             <a
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-400 hover:text-yellow-300 hover:underline"
             >
-              {project.liveLink}
+               <button className="mt-4 mr-4 inline-block px-6 py-4 btn-warning btn btn-outline text-white rounded-lg hover:bg-primary-dark transition-colors">
+    Live Link
+  </button>
             </a>
           </div>
 
           {/* GitHub Links */}
-          <div>
-            <strong className="text-yellow-500 text-xl font-serif">
-              <FaGithub className="inline" /> GitHub Link:
-            </strong>{" "}
+          <div className="space-x-4">
+              <FaGithub className="inline text-yellow-500 text-xl font-serif" />
             <a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-400 hover:text-yellow-300 hover:underline"
-            >
-              {project.githubLink}
-            </a>
+  href={project?.githubLink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="mt-4 mr-4 inline-block px-6 py-4 btn-warning btn btn-outline text-white rounded-lg hover:bg-primary-dark transition-colors">
+    GitHub
+  </button>
+</a>
+
           </div>
           <div>
             <strong className="text-yellow-500 text-xl font-serif">
@@ -476,7 +278,9 @@ const ProjectDetails = () => {
 
         {/* Challenges Faced */}
         <div className="mt-8">
-          <h3 className="text-2xl font-semibold text-yellow-400 mb-4 font-serif">Challenges Faced</h3>
+          <h3 className="text-2xl font-semibold text-yellow-400 mb-4 font-serif">
+            Challenges Faced
+          </h3>
           <ul className="list-disc pl-6 text-gray-300">
             {project.challengesFaced.map((challenge, index) => (
               <li key={index}>{challenge}</li>
