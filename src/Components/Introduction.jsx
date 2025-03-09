@@ -142,7 +142,7 @@ const Introduction = () => {
 
           {/* Resume Download Button */}
           <a
-            href="https://drive.google.com/file/d/1rC_LOM-v3Ma3R2bHWAhJzo-U8T_yuTTt/view"
+            href="https://drive.google.com/file/d/17SN62JLqpW-J02m83Vds0xQ_-GJeZV0R/view?usp=sharing"
             target="_blank"
             className="mt-6 px-6 py-3 font-serif text-xl bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
           >

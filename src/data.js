@@ -3,6 +3,7 @@ import project2 from "/public/project2.png";
 import project3 from "/public/project3.png";
 import project4 from "/public/project4.png";
 import project5 from "/public/project5.png";
+import project6 from "/public/project6.png";
 
 export const ProjectsData = [
   {
@@ -25,8 +26,36 @@ export const ProjectsData = [
       "Adding support for offline learning modes.",
     ],
   },
-  {
+
+
+   {
     id: 2,
+    name: "ScholarShip Project",
+    image: project6, // Ensure this is imported correctly
+    mainTechnologyStack: ["React.js", "Node.js", "Firebase", "React-countup"],
+    briefDescription:
+      "🎓 Scholarship Management System The Scholarship Management System is a web-based platform designed to help students find and apply for scholarships from various universities worldwide. The system streamlines the scholarship application process, making it easier for students to search, apply, and track their applications in one place.",
+    liveLink: "https://scholar-ship-project.web.app/",
+    githubLink:
+      "https://github.com/piona8621/scholarship-client-server",
+      githubLinkServer:
+      "https://github.com/piona8621/scholarship-server-side",
+    challengesFaced: [
+      "Ensuring the app is responsive across different devices.",
+      "Implementing real-time progress tracking for users.",
+      "Debugging issues with database synchronization.",
+    ],
+    areasForImprovement: [
+      "Enhancing the user experience with personalized scholarship recommendations.",
+      "Adding support for offline access to saved scholarships.",
+    ],
+  },
+  
+
+
+
+  {
+    id: 3,
     name: "Visa Navigator Project",
     image: project2,
     mainTechnologyStack: [
@@ -45,7 +74,7 @@ export const ProjectsData = [
     githubLink:
       "https://github.com/programming-hero-web-course2/b10-a10-client-side-piona8621",
     githubLinkServer:
-      "https://github.com/programming-hero-web-course2/b10-a10-server-side-piona8621",
+      "https://github.com/piona8621/scholarship-server-side",
     challengesFaced: [
       "Designing a consistent theme across all sections.",
       "Ensuring responsiveness for different screen sizes.",
@@ -57,7 +86,7 @@ export const ProjectsData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Hotel Booking Project",
     image: project3,
     mainTechnologyStack: [
@@ -86,7 +115,7 @@ export const ProjectsData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "Gadget Haven",
     image: project4,
     mainTechnologyStack: ["React.js", "Tailwind CSS", "Daisy UI"],
@@ -107,7 +136,7 @@ export const ProjectsData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "Animal Adoption Project",
     image: project5,
     mainTechnologyStack: ["Tailwind CSS", "JavaScript", "Daisy UI"],
