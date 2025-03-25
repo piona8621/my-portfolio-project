@@ -5,9 +5,9 @@ import ProfileWithSkills from "../Pages/ProfileWithSkills";
 const AboutUs = () => {
   return (
     <section id="about-me" className="py-12">
-      <div className="container mx-auto px-6 -mt-36">
+      <div className="container mx-auto px-6 -mt-5 lg:-mt-32">
         <h2 className="text-5xl font-serif font-thin
-         text-center mb-8 text-white
+         text-center mb-20  text-white
           animate__animated animate__zoomIn animate__infinite animate__slow
          ">
           About Me

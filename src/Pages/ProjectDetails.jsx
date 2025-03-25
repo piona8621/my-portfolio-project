@@ -172,6 +172,30 @@
 
 // export default ProjectDetails;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { useParams } from "react-router-dom";
@@ -194,7 +218,7 @@ const ProjectDetails = () => {
     return <div className="text-center text-yellow-500">Loading...</div>;
 
   return (
-    <section className="py-20 bg-gradient-to-r mt-10 from-gray-800 via-gray-900 to-black">
+    <section className="py-20">
       <div className="max-w-5xl mx-auto px-6">
         {/* Project Title */}
         <h2 className="text-4xl font-bold text-yellow-500 mb-6">

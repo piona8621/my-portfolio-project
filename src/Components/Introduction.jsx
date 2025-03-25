@@ -155,7 +155,7 @@ const Introduction = () => {
           <img
             src={profileImage}
             alt="Effat Ara"
-            className="w-96 h-96 rounded-full border-4 border-yellow-400"
+            className="w-80 h-80 rounded-full border-4 border-yellow-400"
           />
         </div>
       </div>

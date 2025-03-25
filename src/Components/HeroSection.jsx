@@ -198,7 +198,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <section className="hero -mt-10 -mb-10 -ml-52 text-white py-12 text-center
+    <section className="hero -mt-10 -mb-10  ml-30 lg:-ml-64  text-white py-12 text-center
     
     ">
       <div className="container mx-auto">

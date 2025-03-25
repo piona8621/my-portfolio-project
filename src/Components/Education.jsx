@@ -330,7 +330,7 @@ const Education = () => {
 
           {/* Right Side: Lottie Animation */}
           <div
-            className="flex justify-center animate__animated animate__fadeInLeft" // Added Animate.css fadeInLeft
+            className="flex justify-center animate__animated animate__fadeInLeft md:w-2/3 ml-20" // Added Animate.css fadeInLeft
           >
            <img 
                  src={education}

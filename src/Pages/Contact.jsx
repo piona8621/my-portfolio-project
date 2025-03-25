@@ -572,7 +572,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_jhd42d4", "template_a8330ws", form.current, {
+      .sendForm("service_2kzl7mg", "template_tcgdafj", form.current, {
         publicKey: "Q8hAmHnrsQpO9tspF",
       })
       .then(
@@ -610,7 +610,7 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="space-y-4 border border-gray-700 rounded-xl p-6 md:w-1/2"
+            className="space-y-4 rounded-xl p-6 md:w-1/2 "
           >
             <div>
               <label
@@ -690,7 +690,7 @@ const Contact = () => {
           )}
 
           {/* Lottie Animation */}
-          <div className="w-full md:w-1/2 -mt-5 flex md:mt-56 justify-center">
+          <div className="w-full md:w-96 md:-mt-5 md:ml-20 flex md:mt-34 justify-center">
             <img
               src={email}
               alt="Email Illustration"
